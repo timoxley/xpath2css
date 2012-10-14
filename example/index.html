@@ -1,0 +1,51 @@
+<html>
+<head>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+}
+label {
+  width: 250px;
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+}
+input, textarea {
+  width: 400px
+}
+textarea {
+  height: 4em;
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+    <h2>xpath2css test</h2>
+    <label for="input">Insert xpath to convert to CSS:</label>
+    <input type="text" id="input" value="//a[@id='bleh']" />
+    <br />
+    <label for="output">Output CSS:</label>
+    <textarea type="text" id="output"></textarea>
+    
+    <h3>Examples</h3>
+    <pre><code>
+//a[@id='bleh']
+//ul/li
+//div[@class="comment"]
+//ul/li[3]
+//body//div[@data-binding="currentTime"]
+//div[@id="shoe"][2]/span[@class="body"]//a[contains(@class, "leather")]//img[1]
+    </code></pre>
+<script src="/build/build.js" ></script>
+<script>
+  var input = document.getElementById('input')
+  var output = document.getElementById('output')
+
+  var xpath2css = require('xpath2css')
+  output.value = xpath2css(input.value)
+  input.addEventListener('input', function() {
+    output.value = xpath2css(input.value)
+  })
+</script>
+</body>
+</html>

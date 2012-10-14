@@ -1,0 +1,12 @@
+{
+  "name": "xpath2css",
+  "repo": "timoxley/xpath2css",
+  "description": "Convert simple xpaths to css selectors.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}

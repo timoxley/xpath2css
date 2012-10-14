@@ -11,6 +11,7 @@ $ component install xpath2css
 
 ## Example 
 ```js
+  var xpath2css = require('xpath2css')
   xpath2css('//a[@id="bleh"]') // => a#bleh
   xpath2css('//ul/li') // => ul > li 
   xpath2css('//div[@class="comment"]') // => div.comment
